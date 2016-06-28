@@ -1,0 +1,49 @@
+<html ng-app="skillApp">
+  <head>
+    <meta charset="utf-8">
+    <link href='css/bootstrap/css/bootstrap.css' rel='stylesheet' type='text/css'>
+    <link href='css/bootstrap/css/bootstrap.min.css' rel='stylesheet' type='text/css'>
+    <link href='css/bootstrap/css/bootstrap-button.css' rel='stylesheet' type='text/css'>
+    <link href='css/style.css' rel='stylesheet' type='text/css'>
+
+    <script src="js/angular.js"></script>
+    <script src="js/controllers.js"></script>
+  </head>
+  <body ng-controller="SkillCtrl">
+
+    <div class="span2 search input-search">
+      <input type="text" ng-model="searchTexts" class="input-text">
+      <button ng-click="search()" class="button button-small-caps button-primary">搜索</button>
+      <br><br>
+
+      <select ng-model="order" class="select-order">
+        <option value="">请选择</option>
+        <option value="match">总计分数</option>
+      </select>
+    </div>          
+    <table class="table table-bordered table-style">
+       
+      <tr ng-repeat="item in items | filter:searchtext | orderBy:order:!reverse">
+
+        <td>{{item.salary}}</td>
+
+        <td>{{item.match}}</td>
+
+        <td>{{item.advance}}</td>
+
+        <td>{{item.describe}}</td>
+
+        <td>{{item.title}}</td>
+
+        <td>{{item.company}}</td>
+
+        <td>{{item.scale}}</td>
+
+      </tr>
+       
+    </table>
+
+    
+
+  </body>
+</html>
