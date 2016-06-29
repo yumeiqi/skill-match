@@ -1,6 +1,6 @@
 var app = angular.module('skillApp', []);
 
-app.controller('SkillCtrl', function($scope, $sce, $log) {
+app.controller('skillCtrl', function($scope, $sce, $log) {
 
     $scope.searchTexts = "";
 
@@ -1442,6 +1442,7 @@ app.controller('SkillCtrl', function($scope, $sce, $log) {
 
       })
     }
+    datas  = datas.slice(0, 10);
 
     $scope.order = "match";
 
