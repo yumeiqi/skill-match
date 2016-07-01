@@ -2,6 +2,7 @@ var express = require('express');
 var skill = express();
 var mysql = require('mysql');
 
+skill.use(express.static(path.join(__dirname, 'public')));
 var matchs = require('./db.json');
 // var db = mysql.createConnection({
 // 	host: 		'127.0.0.1',
