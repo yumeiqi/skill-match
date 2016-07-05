@@ -1,6 +1,7 @@
 var express = require('express');
 var skill = express();
 var mysql = require('mysql');
+var path = require('path');
 
 skill.use(express.static(path.join(__dirname, 'public')));
 var matchs = require('./db.json');
